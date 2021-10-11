@@ -1,0 +1,30 @@
+{
+    "jobs":[
+        {
+            "_id": "615b0503003e8b886f318293",
+            "recruiter": "6159c8c03f0592df50571e42",
+            "position": "back end developer",
+            "salary": "50000",
+            "location": "Bangalore",
+            "requiredQualification": [
+              "B.E"
+            ],
+            "companyname": "google company",
+            "date": "2021-10-04T13:43:31.042Z",
+            "__v": 0
+          },
+          {
+            "_id": "615b0528003e8b886f318295",
+            "recruiter": "6159c8c03f0592df50571e42",
+            "position": "front end developer",
+            "salary": "60000",
+            "location": "Bangalore",
+            "requiredQualification": [
+              "B.E"
+            ],
+            "companyname": "facebook company",
+            "date": "2021-10-04T13:44:08.006Z",
+            "__v": 0
+          }
+    ]
+}

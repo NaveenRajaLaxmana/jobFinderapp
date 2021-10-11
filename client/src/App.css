@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+:root{
+  --primary: #0336ff;
+  --secondary:#BB86Fc;
+  --ternary:#000;
+}
+body
+{
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.navbar{
+  height: 70px;
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 10px;
+}
+.navbar .heading-banner
+{
+  text-align: center;
+}
+.navbar .heading-banner h2 a
+{
+  text-decoration: none;
+  color: #fff;
+}
+.navbar .navbar-links
+{
+  display: flex;
+}
+.navbar .navbar-links .link
+{
+  list-style: none;
+  margin-right: 10px;
+}
+.navbar .navbar-links .link a
+{
+  text-decoration: none;
+  color: #fff;
+  font-size: 19px;
+}
+.landing-page 
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+.landing-page .search-jobs
+{
+  margin: 10px 15px;
+  align-self: center;
+}
+.landing-page .search-jobs .input-box
+{
+  margin-right: 10px;
+  height: 35px;
+  width: 160px;
+  padding-left: 3px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #000;
+}
+.landing-page .search-jobs .search-button
+{
+  height: 35px;
+  width: max-content;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: var(--secondary);
+  color: #fff;
+  cursor: pointer; 
+}
+.landing-page .banner
+{
+  position: relative;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.landing-page .banner a
+{
+  margin-top: 25px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--primary);
+  font-size: 20px;
+}
+.landing-page .jobs 
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.landing-page .jobs .applications
+{
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100vw;
+}
+.landing-page .jobs .applications .application
+{
+  margin: 5px;
+  padding: 15px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.8),
+              -1px -1px 2px rgba(0,0,0,.8);
+  border-radius: 5px;
+}
+.landing-page .jobs .applications .application:hover
+{
+  cursor: pointer;
+}
+.footer
+{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background: var(--ternary);
+}
+.footer .footer-links
+{
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+  padding: 10px 0;
+}
+.footer .footer-links .link
+{
+  list-style: none;
+  margin: 0 5px;
+}
+.footer .footer-links .link a
+{
+  text-decoration: none;
+  color: #fff;
+}
+.login-form
+{
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 400px;
+}
+.login-form h1
+{
+  text-align: center;
+}
+.login-form form
+{
+  display: flex;
+  flex-direction: column;
+}
+.login-form form .form-group 
+{
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+.login-form form .form-group label
+{
+  font-size: 20px;
+}
+.login-form form .form-group input
+{
+  margin-top: 3px;
+  height: 30px;
+  padding-left: 3px;
+  font-size: 17px;
+}
+.login-form form .form-group.radio
+{
+  display: flex;
+  flex-direction: column;
+}
+.login-form form .form-group.radio div
+{
+  display: flex;
+}
+.login-form form .form-group.radio div input[type="radio"]
+{
+  cursor: pointer;
+}
+.login-form form .form-group.radio div span
+{
+  margin-left: 8px;
+  position: relative;
+  top: 8px;
+}
+.login-form form button
+{
+  margin-top: 5px;
+  height: 30px;
+  background: var(--secondary);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+/* .signup-form .user-register-form
+{
+  display: none !important;
+} */
+.signup-form .user-register-form,.signup-form .recruiter-register-form
+{
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 400px;
+}
+.signup-form .user-register-form h1,.signup-form .recruiter-register-form h1
+{
+  text-align: center;
+}
+.signup-form .user-register-form form,.signup-form .recruiter-register-form form
+{
+  display: flex;
+  flex-direction: column;
+}
+.signup-form .user-register-form form .form-group,.signup-form .recruiter-register-form form .form-group 
+{
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+.signup-form .user-register-form form .form-group label,.signup-form .recruiter-register-form form .form-group label
+{
+  font-size: 20px;
+}
+.signup-form .user-register-form form .form-group input,.signup-form .recruiter-register-form form .form-group input
+{
+  margin-top: 3px;
+  height: 30px;
+  padding-left: 3px;
+  font-size: 17px;
+}
+
+.signup-form .user-register-form form button,.signup-form .recruiter-register-form form button
+{
+  margin-top: 5px;
+  height: 30px;
+  background: var(--secondary);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.signup-form .toggler
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.signup-form .toggler h4
+{
+  margin: 5px;
+  text-decoration: underline;
+}
+.signup-form .toggler h4:hover
+{
+  cursor: pointer;
+}
+.userDashboard,.recruiterDashboard
+{
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+.userDashboard h3,.recruiterDashboard h3
+{
+  align-self: center;
+}
+.userDashboard .applications,.recruiterDashboard .applications
+{
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100vw;
+}
+.userDashboard .applications .application,.recruiterDashboard .applications .application
+{
+  margin: 5px;
+  padding: 15px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.8),
+              -1px -1px 2px rgba(0,0,0,.8);
+  border-radius: 5px;
+}
+.recruiterDashboard .postjob-button
+{
+  position: absolute;
+  margin: 10px 0;
+  right: 30px;
+  padding: 10px;
+  background: var(--secondary);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.post-job,.apply-job
+{
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 400px;
+}
+.post-job h4,.apply-job h4
+{
+  text-align: center;
+}
+.post-job form,.apply-job form{
+  display: flex;
+  flex-direction: column;
+}
+.post-job form .form-group,.apply-job form .form-group
+{
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+.post-job form .form-group label,.apply-job form .form-group label
+{
+  font-size: 20px;
+}
+.post-job form .form-group input,.apply-job form .form-group input
+{
+  margin-top: 3px;
+  height: 30px;
+  padding-left: 3px;
+  font-size: 17px;
+}
+.post-job form button,.apply-job form button
+{
+  margin-top: 5px;
+  height: 30px;
+  background: var(--secondary);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.single-job
+{
+  margin: 80px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.single-job .box 
+{
+  height: 400px;
+  padding: 40px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.8),
+              -1px -1px 2px rgba(0,0,0,.8);
+  display: flex;
+  flex-direction: column;
+}
+.single-job .box
+{
+  text-transform: capitalize;
+}
+.single-job .box *
+{
+  margin-top: 10px;
+}
+.single-job .box button
+{
+  margin-top: 5px;
+  height: 30px;
+  background: var(--secondary);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.pagination
+{
+  display: flex;
+  position: relative;
+  top: 250px;
+  justify-content: center;
+}
+.pagination li
+{
+  display: flex;
+  list-style: none;
+  margin-right: 3px;
+  border: 1px solid var(--primary);
+  padding: 5px;
+  border-radius: 3px;
+}
+.pagination li a
+{
+  text-decoration: none;
+}
