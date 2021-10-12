@@ -1,4 +1,0 @@
-{
-    "mongoURI":"mongodb+srv://dkdm:dkdm@cluster0.6k0e1.mongodb.net/domaincer_assignment_jobsportal?retryWrites=true&w=majority",
-    "jwtSecret":"secret"
-}
