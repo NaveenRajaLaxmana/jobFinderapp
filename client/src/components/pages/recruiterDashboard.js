@@ -4,7 +4,7 @@ import RecruiterContext from '../../context/recruiterauth/authContext'
 
 
 const RecruiterDashboard = (props) => {
-    const host="http://localhost:5000";
+    // const host="http://localhost:5000";
     const [applications,setApplications] = useState([]);
     const recruiterContext = useContext(RecruiterContext)
     const {loaduser} = recruiterContext
@@ -15,7 +15,8 @@ const RecruiterDashboard = (props) => {
         }
       };
     async function getapplicants(){
-        const result = await axios.get(`${host}/getapplicants/`,config);
+        // const result = await axios.get(`${host}/getapplicants/`,config);
+        const result = await axios.get(`/getapplicants/`,config);
         if(result.data){
             setApplications(result.data);
         }

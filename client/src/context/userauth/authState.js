@@ -6,7 +6,7 @@ import setAuthToken from '../../utils/setAuthToken'
 import {REGISTER_SUCCESS,REGISTER_FAIL,USER_LOADED,AUTH_ERROR,LOGIN_SUCCESS,LOGIN_FAIL,LOGOUT,CLEAR_ERRORS} from '../types'
 
 const AuthState = props => {
-    const host = 'http://localhost:5000'
+    // const host = 'http://localhost:5000'
 
     const initialState = {
         token: localStorage.getItem('token'),
@@ -23,7 +23,8 @@ const loaduser = async() => {
 
 
 try{
-    const res = await axios.get(`${host}/api/user/auth`);
+    // const res = await axios.get(`${host}/api/user/auth`);
+    const res = await axios.get(`/api/user/auth`);
     dispatch({
         type:USER_LOADED,
         payload:res.data
@@ -44,7 +45,8 @@ const register = async formData => {
     };
 
     try{
-        const res = await axios.post(`${host}/api/user/new`,formData,config);
+        // const res = await axios.post(`${host}/api/user/new`,formData,config);
+        const res = await axios.post(`/api/user/new`,formData,config);
        
         dispatch({
             type:REGISTER_SUCCESS,
@@ -71,7 +73,8 @@ const register = async formData => {
           };
       
           try {
-            const res = await axios.post(`${host}/api/user/auth`, formData, config);
+            // const res = await axios.post(`${host}/api/user/auth`, formData, config);
+            const res = await axios.post(`/api/user/auth`, formData, config);
       
             dispatch({
               type: LOGIN_SUCCESS,

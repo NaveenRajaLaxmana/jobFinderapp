@@ -5,7 +5,7 @@ import jobReducer from './jobReducer'
 import {GET_JOBS,POST_JOB,JOBS_ERRORS, APPLY_JOB,SET_CURRENT_JOB_APPLICATION,FILTER_JOBS,CLEAR_FILTER,APPLIED_JOBS} from '../types'
 
 const JobState = (props) => {
-  const host = 'http://localhost:5000'
+  // const host = 'http://localhost:5000'
     const initialState = {
         jobs:null,
         current:null,
@@ -17,8 +17,8 @@ const JobState = (props) => {
 
     const getJobs = async () => {
         try{
-            const res = await axios.get(`${host}/getjobs`)
-          
+            // const res = await axios.get(`${host}/getjobs`)
+            const res = await axios.get(`/getjobs`)
             dispatch({
                 type:GET_JOBS,
                 payload:res.data
@@ -38,8 +38,8 @@ const JobState = (props) => {
         }
       };
       try{
-        const res = await axios.get(`${host}/getuserapplications`,config)
-        
+        // const res = await axios.get(`${host}/getuserapplications`,config)
+        const res = await axios.get(`/getuserapplications`,config)
         dispatch({
             type:APPLIED_JOBS,
             payload:res.data
@@ -59,7 +59,8 @@ const JobState = (props) => {
             }
           };
           try{
-              const res = await axios.post(`${host}/api/recruiter/postjob`,formData,config)
+              // const res = await axios.post(`${host}/api/recruiter/postjob`,formData,config)
+              const res = await axios.post(`/api/recruiter/postjob`,formData,config)
                 dispatch({
                     type:POST_JOB,
                     payload:res.data
@@ -83,7 +84,8 @@ const JobState = (props) => {
             }
           };
           try{
-              const res = await axios.post(`${host}/api/user/applyjob`,formData,config)
+              // const res = await axios.post(`${host}/api/user/applyjob`,formData,config)
+              const res = await axios.post(`/api/user/applyjob`,formData,config)
                 dispatch({
                     type:APPLY_JOB,
                     payload:res.data

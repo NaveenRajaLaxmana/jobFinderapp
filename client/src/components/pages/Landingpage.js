@@ -1,6 +1,5 @@
 import React,{useState,useEffect,useContext} from 'react'
 import Search from '../layout/Search'
-import axios from 'axios'
 import {Link} from 'react-router-dom'
 import JobContext from '../../context/jobs/jobContext';
 import Pagination from '../layout/Pagination';

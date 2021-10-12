@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React,{useEffect,useState,useContext} from 'react'
 import JobContext from '../../context/jobs/jobContext'
 import UserAuthContext from '../../context/userauth/authContext'

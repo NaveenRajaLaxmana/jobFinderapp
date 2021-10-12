@@ -6,7 +6,7 @@ import setAuthToken from '../../utils/setAuthToken'
 import {REGISTER_SUCCESS,REGISTER_FAIL,RECRUITER_LOADED,AUTH_ERROR,LOGIN_SUCCESS,LOGIN_FAIL,LOGOUT,CLEAR_ERRORS} from '../types'
 
 const AuthState = props => {
-  const host = 'http://localhost:5000'
+  // const host = 'http://localhost:5000'
 
   const initialState = {
     token: localStorage.getItem('token'),
@@ -24,7 +24,8 @@ setAuthToken(localStorage.token)
 
 
 try{
-const res = await axios.get(`${host}/api/recruiter/auth`);
+// const res = await axios.get(`${host}/api/recruiter/auth`);
+const res = await axios.get(`/api/recruiter/auth`);
 
 dispatch({
     type:RECRUITER_LOADED,
@@ -45,7 +46,8 @@ const config = {
 };
 
 try{
-    const res = await axios.post(`${host}/api/recruiter/new`,formData,config);
+    // const res = await axios.post(`${host}/api/recruiter/new`,formData,config);
+    const res = await axios.post(`/api/recruiter/new`,formData,config);
     
     dispatch({
         type:REGISTER_SUCCESS,
@@ -70,7 +72,8 @@ const login = async formData => {
       };
   
       try {
-        const res = await axios.post(`${host}/api/recruiter/auth`, formData, config);
+        // const res = await axios.post(`${host}/api/recruiter/auth`, formData, config);
+        const res = await axios.post(`/api/recruiter/auth`, formData, config);
   
         dispatch({
           type: LOGIN_SUCCESS,

@@ -16,7 +16,7 @@ const Navbar = () => {
         }else{
             setuserlogged(false)
         }
-    },[userlogged])
+    },[userlogged,loaduser,recruiter])
     return (
         <div className="navbar">
             <div className="heading-banner">
